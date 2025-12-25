@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================
+   GLOBAL THEME
+===================== */
+
+:root {
+  --primary: #4f46e5;
+  --secondary: #06b6d4;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-slate-800 antialiased font-sans;
+}
+
+/* =====================
+   LAYOUT SYSTEM
+===================== */
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* =====================
+   UI UTILITIES
+===================== */
+
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+
+.btn-primary {
+  @apply px-6 py-3 rounded-lg text-white font-medium
+         bg-gradient-to-r from-indigo-600 to-cyan-500
+         hover:scale-[1.03] transition;
+}
+
+.btn-outline {
+  @apply px-6 py-3 rounded-lg border border-slate-300
+         hover:bg-slate-100 transition;
+}
